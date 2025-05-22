@@ -35,7 +35,7 @@ t_save = [0.0, 24.0, 48.0, 72.0]
 C1 = Float64.(all_data_LV)
 
 # Ajustar modelo LV
-gR, I = fn.opt_lv(C1, t_save, 10000)
+gR, I = fn.opt_lv(C1, t_save, 50000)
 
 
 

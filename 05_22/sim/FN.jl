@@ -63,7 +63,7 @@ module fn
             end
         end
     
-        return mean(losses.^2)
+        return mean(losses)
     end
     
 #=

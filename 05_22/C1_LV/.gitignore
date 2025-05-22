@@ -1,0 +1,25 @@
+# Archivos y carpetas de Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Archivos temporales/intermedios
+*.log
+*.tmp
+*.bak
+
+# Archivos de salida de jobs
+*.sge.*
+*.o*
+*.e*
+*.po*
+*.pe*
+
+
+# Archivos de entorno y configuración local
+.env
+.venv/
+*.swp
+.DS_Store
+.idea/
+.vscode/

@@ -78,9 +78,9 @@ mSigma_names = ["mSigma[0]"]
 # Growth rates
 gR_prior = n_types * [("uniform", 0.25, 72)]
 # Intra-specific interactions
-I_intra_prior = n_types * [("uniform", -1, 1)]
+I_intra_prior = n_types * [("uniform", -0.001, 0.001)]
 # Inter-specific interactions
-I_inter_prior = (n_types**2-n_types) * [("norm", 0, 1)]
+I_inter_prior = (n_types**2-n_types) * [("norm", 0, 0.001)]
 # Scaling factor
 mSigma_prior = [("uniform", 1.5E4, 1E4)]
 
@@ -183,8 +183,8 @@ history_abs_abund = History(db_path_abs_abund, _id=1)
 print('number of generations: %s'%history_abs_abund.max_t)
 
 gR_lim = n_types * [(0, 75)]
-I_intra_lim = n_types * [(-1.1, 1.1)]
-I_inter_lim = (n_types**2-n_types) * [(-1.1, 1.1)]
+I_intra_lim = n_types * [(-.002, 0.002)]
+I_inter_lim = (n_types**2-n_types) * [(-0.002, 0.002)]
 mSigma_lim = [(0., 1E5)]
 
 

@@ -10,7 +10,7 @@ import pickle as pc
 
 
 # Import parameters used in simulations
-with open('./experimental_abs_abund.pickle', 'rb') as f:
+with open('./LV_abs_abund.pickle', 'rb') as f:
     data_par = pc.load(f)
 # Number of microbial types
 n_types = data_par['n_types']
@@ -22,6 +22,9 @@ sampling_times = data_par['sampling_times']
 # Initial absolute abundance
 init_abs_abund = data_par['init_abs']
 # Initial relative abundance
+with open('./data/C1_rel_abund.pickle', 'rb') as f:
+    data_par = pc.load(f)
+init_rel_abund = data_par['init_rel']
 #init_rel_abund = data_par['init_rel_abund']
 # Threshold to stop diverging numerical simulations
 upper_threshold = 3E7

@@ -10,7 +10,7 @@ import pickle as pc
 
 
 # Import parameters used in simulations
-with open('./LV_abs_abund.pickle', 'rb') as f:
+with open('./data/LV_abs_abund.pickle', 'rb') as f:
     data_par = pc.load(f)
 # Number of microbial types
 n_types = data_par['n_types']

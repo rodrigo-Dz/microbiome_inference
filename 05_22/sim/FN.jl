@@ -88,7 +88,7 @@ module fn
         gR0 = ones(n)
         I0 = zeros(n, n)
         for i in 1:n
-            I0[i, i] = -0.5
+            I0[i, i] = -10
         end
         I0 .*= 1e-5
         # Parámetros iniciales aleatorios
@@ -110,7 +110,7 @@ module fn
 
             loss1 = lv_loss(p1, C1, t_save)
             dloss = loss1 - loss0
-            T = 0.001
+            T = 0.00001
             c1 = loss1 < loss0 || rand() < exp(-dloss / T)
 
             if c1

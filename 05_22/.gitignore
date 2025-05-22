@@ -1,6 +1,5 @@
 # Archivos y carpetas de Python
 __pycache__/
-*.py[cod]
 *.so
 
 # Archivos temporales/intermedios

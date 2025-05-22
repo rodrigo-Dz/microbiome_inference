@@ -137,16 +137,6 @@ u0 = C1[1, 1, :]
 # Simular con parámetros optimizados
 sim_opt = simulate_lv(u0, gR, I, (t_save[1], t_save[end]), t_save)
 
-# Graficar datos reales y simulados
-plot()
-for i in 1:size(C1, 3)
-    scatter!(t_save, C1[1, :, i], label="Datos individuo $i", markershape=:circle)
-    plot!(t_save, sim_opt[:, i], label="Simulación individuo $i", lw=2)
-end
-
-xlabel!("Tiempo (hrs)")
-ylabel!("Población")
-title!("Simulación con parámetros optimizados vs Datos")
 
 # Condiciones iniciales: toma primer experimento, primer tiempo
 for j in 1:size(C1, 1)

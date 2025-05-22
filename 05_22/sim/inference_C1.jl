@@ -3,7 +3,7 @@ using DataFrames
 using DifferentialEquations
 using Optim
 using Statistics  # Importar el módulo para usar `mean`
-
+using Distributions
 using Plots
 
 # Leer archivos
@@ -109,10 +109,10 @@ function simulate_lv(u0, r, A, tspan, t_save)
     return sim
 end
 
-function unpack_params(params, n_types)
+function unpack_params(p, n_types)
     n = n_types
-    r = params[1:n]
-    A = reshape(params[n+1:end], (n, n))
+    r = p[1:n]
+    A = reshape(p[n+1:end], (n, n))
     return r, A
 end
 
@@ -121,7 +121,6 @@ function lv_loss(params_flat, C1, t_save)
     losses = zeros(size(C1, 1))  # Arreglo para almacenar el error promedio de cada experimento
     for exp_id in 1:size(C1, 1)
         u0 = C1[exp_id, 1, :]
-        println("u0: ", u0)
         sim = simulate_lv_safe(u0, r, A, (t_save[1], t_save[end]), t_save)
 
         losses[exp_id] = mean(abs.(sim .- C1[exp_id, :, :]))
@@ -136,35 +135,42 @@ function opt_lv(C1::Array{Float64,3}, t_save::Vector{Float64})
     # Parámetros iniciales aleatorios
     gR0 = [1,1,1,1,1]
     I0 =  1E-5 * [-1 0 0 0 0; 0 -1 0 0 0; 0 0 -1 0 0; 0 0 0 -1 0; 0 0 0 0 -1]     # Distribución normal con media 0 y desviación estándar 5
-    params0 = vcat(gR0, vec(I0))
-    loss0 = lv_loss(params0, C1, t_save)
+    p0 = vcat(gR0, vec(I0))
+    loss0 = lv_loss(p0, C1, t_save)
     loss_history = [loss0]
+    r0 = zeros(length(p0))
 
     println("Initial loss: ", loss0)
     i = 0
-    while i < 50000
-        println("Iteration: ", i)
-        gR1 = gR0 + 0.1 * randn(n)
-        I1 = I0 + 0.001 * randn(n, n)
-        params1 = vcat(gR1, vec(I1))
-        loss1 = lv_loss(params1, C1, t_save)
-        if loss1 < loss0
-            println("Updating parameters")
-            gR0 = gR1
-            I0 = I1
-            loss0 = loss1
-            append!(loss_history, loss0)
+    while i < 5000
+        rI = rand(MvNormal(zeros(length(p0)), zeros(length(p0)) .+ fill(0.0001, length(p0)))); # Random values to update parameters
+        p1 = copy(p0); # Copy of the initial parameters
+        for pI in 1:length(p1)  # Update parameter values
+            r0[pI] = p1[pI]; # Save previous value
+            p1[pI] += rI[pI]; # Update value
+        end
 
+        println(i)
+
+        loss1 = lv_loss(p1, C1, t_save)
+
+        xiC = (loss0 ^ 2) / (2 * 0.083);
+		xiP = (loss1 ^ 2) / (2 * 0.083);
+
+        c1 = rand() < exp(xiC - xiP)
+        if c1
+            p0 = p1
+            loss0 = loss1
         end
         i += 1
     end
-    plot()
-    plot(loss_history, label="Loss", xlabel="Iteration", ylabel="Loss", title="Optimization Progress", lw=2)
-    
+
+    gR_final = p0[1:n]
+    I_final = reshape(p0[n+1:end], (n, n))
     println("Final loss: ", loss0)
-    println("Final gR: ", gR0)
-    println("Final I: ", I0)
-    return gR0, I0
+    println("Final gR: ", gR_final)
+    println("Final I: ", I_final)
+    return gR_final, I_final
 end
 
 
@@ -186,8 +192,6 @@ gR, I = opt_lv(C1, t_save)
 
 using Plots
 
-# Supongamos que params_opt es el resultado de la optimización
-# Desempaquetar parámetros: ejemplo para 3 especies
 
 for j in 1:size(C1, 1)
     u0 = C1[j, 1, :]

@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "/mnt/atgc-d3/sur/users/raguilar/exp/2025/microbiome_inference/05_23/C1_LV/moments.py", line 205, in <module>
+    mp.savefig('./res/abs_moments.png')
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/matplotlib/pyplot.py", line 1243, in savefig
+    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+  File "/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/matplotlib/figure.py", line 3490, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2184, in print_figure
+    result = print_method(
+        filename,
+    ...<3 lines>...
+        bbox_inches_restore=_bbox_inches_restore,
+        **kwargs)
+  File "/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2040, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+                                                                 ~~~~^
+        *args, **{k: v for k, v in kwargs.items() if k not in skip}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 481, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 430, in _print_pil
+    mpl.image.imsave(
+    ~~~~~~~~~~~~~~~~^
+        filename_or_obj, self.buffer_rgba(), format=fmt, origin="upper",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dpi=self.figure.dpi, metadata=metadata, pil_kwargs=pil_kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/matplotlib/image.py", line 1644, in imsave
+    image.save(fname, **pil_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/PIL/Image.py", line 2591, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: './res/abs_moments.png'
+Traceback (most recent call last):
+  File "/mnt/atgc-d3/sur/users/raguilar/exp/2025/microbiome_inference/05_23/C1_LV/inference_LV.py", line 24, in <module>
+    from sc_LV_numerics import model_rel_abund_closure_from_2nd as LV_model_rel_abund
+ImportError: cannot import name 'model_rel_abund_closure_from_2nd' from 'sc_LV_numerics' (/mnt/atgc-d3/sur/users/raguilar/exp/2025/microbiome_inference/05_23/C1_LV/sc_LV_numerics.py). Did you mean: 'model_rel_abund_closure_from_3rd'?

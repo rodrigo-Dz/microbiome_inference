@@ -5,4 +5,4 @@
 #$ -S /bin/bash
 conda activate microbiome_inference
 python moments.py
-python inference_logistic.py
+python inference_LV.py

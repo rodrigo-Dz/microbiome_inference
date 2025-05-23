@@ -68,26 +68,25 @@ C1_rel_abund = C1_rel_abund['data']
 
 
 gR_names = ["gR_%i"%i for i in range(n_types)]
-dR_names = ["dR_%i"%i for i in range(n_types)]
-mR_names = ["mR_%i"%i for i in range(n_types)]
-N_names = ["N"]
+I_intra_names, I_inter_names = [], []
+for i in range(n_types):
+    for j in range(n_types):
+        if i == j: I_intra_names.append("I_%i_%i"%(i,j))
+        else: I_inter_names.append("I_%i_%i"%(i,j))
 mSigma_names = ["mSigma[0]"]
 
 # Growth rates
 gR_prior = n_types * [("uniform", 0.25, 72)]
-# Death rates
-dR_prior = n_types * [("uniform", 0, 2E6)]
-# Immigration rates
-mR_prior = n_types * [("uniform", 0, 2E6)]
-# Carrying capacity
-N_prior = [("uniform", 1.4E7, 2E6)]
+# Intra-specific interactions
+I_intra_prior = n_types * [("uniform", -0.0001, 0.0001)]
+# Inter-specific interactions
+I_inter_prior = (n_types**2-n_types) * [("norm", 0, 0.0001)]
 # Scaling factor
-mSigma_prior = [("uniform", 1E6, 9E6)]
+mSigma_prior = [("uniform", 1.5E4, 1E4)]
 
-parameter_names = gR_names + dR_names + mR_names + N_names + mSigma_names
-priors_shapes = gR_prior + dR_prior + mR_prior + N_prior + mSigma_prior
+parameter_names = gR_names + I_intra_names + I_inter_names + mSigma_names
+priors_shapes = gR_prior + I_intra_prior + I_inter_prior + mSigma_prior
 priors_dict = dict(zip(parameter_names, priors_shapes))
-
 priors = Distribution(**{key: RV(a, b, c) for key, (a, b, c) in priors_dict.items()})
 
 print(priors_dict)
@@ -153,7 +152,7 @@ max_walltime_p = timedelta(minutes=6*720)
 
 
 
-with open('./logistic_inference_parameters.pickle', 'wb') as f:
+with open('./LV_inference_parameters.pickle', 'wb') as f:
     inference_dict = {'priors_dict': priors_dict, 'start_nr_particles_p': start_nr_particles_p, 'mean_cv_p': mean_cv_p, 'nr_calibration_particles_p': nr_calibration_particles_p, 'n_bootstrap_p': n_bootstrap_p, 'min_population_size_p': min_population_size_p, 'max_population_size_p': max_population_size_p, 'scaling_p': scaling_p, 'initial_epsilon_p': initial_epsilon_p, 'alpha_p': alpha_p, 'quantile_multiplier_p': quantile_multiplier_p, 'minimum_epsilon_abs_abund_p': minimum_epsilon_abs_abund_p, 'minimum_epsilon_rel_abund_p': minimum_epsilon_rel_abund_p, 'max_nr_populations_p': max_nr_populations_p, 'max_walltime_p': max_walltime_p}
     pc.dump(inference_dict, f)
 
@@ -162,7 +161,7 @@ print(inference_dict)
 
 
 abc_abs_abund = ABCSMC(
-    models=logistic_model_abs_abund,
+    models=LV_model_abs_abund,
     parameter_priors=priors,
     distance_function=distance_abs_abund,
     population_size=AdaptivePopulationSize(start_nr_particles=start_nr_particles_p, mean_cv = mean_cv_p, nr_calibration_particles=nr_calibration_particles_p, n_bootstrap=n_bootstrap_p, min_population_size = min_population_size_p, max_population_size = max_population_size_p),
@@ -183,17 +182,18 @@ print('number of generations: %s'%history_abs_abund.max_t)
 
 
 gR_lim = n_types * [(0, 75)]
-dR_lim = n_types * [(0, 2.1E6)]
-mR_lim = n_types * [(0, 2.1E6)]
-N_lim = [(1.3E7, 1.7E7)]
-mSigma_lim = [(1E6, 1E7)]
+I_intra_lim = n_types * [(-.002, 0.002)]
+I_inter_lim = (n_types**2-n_types) * [(-0.002, 0.002)]
+mSigma_lim = [(0., 1E5)]
 
-limits = gR_lim + dR_lim + mR_lim + N_lim + mSigma_lim
+
+
+limits = gR_lim + I_intra_lim + I_inter_lim + mSigma_lim
 limits_dict = dict(zip(parameter_names, limits))
 
-gR_mean_posterior, dR_mean_posterior, mR_mean_posterior = [], [], []
+gR_mean_posterior, I_intra_mean_posterior, I_inter_mean_posterior = [], [], []
 
-posterior_dist = history_abs_abund.get_distribution(m=0,t=history_abs_abund.max_t)[0]
+posterior_dist = history_abs_abund.get_distribution()[0]
 
 for par in parameter_names:
     
@@ -201,20 +201,18 @@ for par in parameter_names:
     
     x = np.linspace(limits_dict[par][0], limits_dict[par][1], 100)
     mp.figure()
+
     if par in gR_names: 
         gR_mean_posterior.append(np.mean(par_posterior))
-        mp.plot(x, sp.stats.uniform.pdf(x, priors_dict[par][1], priors_dict[par][2]), color='k', label = 'prior')
+        mp.plot(x, sp.stats.norm.pdf(x, priors_dict[par][1], priors_dict[par][2]), color='k', label = 'prior')
         
-    if par in dR_names: 
-        dR_mean_posterior.append(np.mean(par_posterior))
+    if par in I_intra_names: 
+        I_intra_mean_posterior.append(np.mean(par_posterior))
         mp.plot(x, sp.stats.uniform.pdf(x, priors_dict[par][1], priors_dict[par][2]), color='k', label = 'prior')
     
-    if par in mR_names: 
-        mR_mean_posterior.append(np.mean(par_posterior))
-        mp.plot(x, sp.stats.uniform.pdf(x, priors_dict[par][1], priors_dict[par][2]), color='k', label = 'prior')
-
-    if par == 'N': 
-        mp.plot(x, sp.stats.uniform.pdf(x, priors_dict[par][1], priors_dict[par][2]), color='k', label = 'prior')
+    if par in I_inter_names: 
+        I_inter_mean_posterior.append(np.mean(par_posterior))
+        mp.plot(x, sp.stats.norm.pdf(x, priors_dict[par][1], priors_dict[par][2]), color='k', label = 'prior')
         
     mp.hist(par_posterior, density=True, bins = 25, alpha=0.8, label = 'posterior')
     mp.xlim(limits_dict[par])
@@ -225,6 +223,8 @@ for par in parameter_names:
 
 print('posterior: \t', np.array(gR_names)[np.argsort(gR_mean_posterior)],'\n')
 
-print('posterior: \t', np.array(dR_names)[np.argsort(dR_mean_posterior)],'\n')
 
-print('posterior: \t', np.array(mR_names)[np.argsort(mR_mean_posterior)],'\n')
+print('posterior: \t', np.array(I_intra_names)[np.argsort(I_intra_mean_posterior)],'\n')
+
+
+print('posterior: \t', np.array(I_inter_names)[np.argsort(I_inter_mean_posterior)],'\n')

@@ -183,8 +183,8 @@ history_abs_abund = History(db_path_abs_abund, _id=1)
 print('number of generations: %s'%history_abs_abund.max_t)
 
 gR_lim = n_types * [(0, 75)]
-I_intra_lim = n_types * [(-.0002, 0.0002)]
-I_inter_lim = (n_types**2-n_types) * [(-0.0002, 0.0002)]
+I_intra_lim = n_types * [(-.0005, 0.0005)]
+I_inter_lim = (n_types**2-n_types) * [(-0.0005, 0.0005)]
 mSigma_lim = [(0., 1E5)]
 
 

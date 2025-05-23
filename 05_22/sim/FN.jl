@@ -57,7 +57,7 @@ module fn
             sim = simulate_lv_safe(u0, r, A, (t_save[1], t_save[end]), t_save)
     
             if any(!isfinite, sim)
-                losses[exp_id] = 10000000  # Penalización fuerte por simulación fallida
+                losses[exp_id] = 500000  # Penalización fuerte por simulación fallida
             else
                 losses[exp_id] = mean(abs.(sim .- C1[exp_id, :, :]))
             end
@@ -81,11 +81,11 @@ module fn
 =#
 
     # Optimización de parámetros r y A
-    function opt_lv(C1::Array{Float64,3}, t_save::Vector{Float64}, iters)
-        open(string("./OUT.txt"), "w") do io
+    function opt_lv(C1::Array{Float64,3}, t_save::Vector{Float64}, iters, com)
+        open(string("./OUT_",com,".txt"), "w") do io
 
         n = size(C1, 3)
-        gR0 = ones(n)
+        gR0 = ones(n) .+ 10
         I0 = zeros(n, n)
         for i in 1:n
             I0[i, i] = -10
@@ -110,7 +110,7 @@ module fn
 
             loss1 = lv_loss(p1, C1, t_save)
             dloss = loss1 - loss0
-            T = 0.00001
+            T = 0.001
             c1 = loss1 < loss0 || rand() < exp(-dloss / T)
 
             if c1

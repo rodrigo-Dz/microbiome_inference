@@ -6,6 +6,10 @@ using Statistics  # Importar el módulo para usar `mean`
 using Distributions
 using Plots
 
+
+fn = include(string("FN.jl"));
+
+
 # Leer archivos
 data = CSV.read("freq.csv", DataFrame)
 meta = CSV.read("meta.csv", DataFrame)
@@ -28,8 +32,8 @@ com = select(data, names...)
 
 # Llenar datos t=0
 all_data_L[1, 1, :] = com[:, 1]
-all_data_L[2, 1, :] = com[:, 1]
-all_data_L[3, 1, :] = com[:, 2]
+all_data_L[2, 1, :] = com[:, 2]
+all_data_L[3, 1, :] = com[:, 1]
 all_data_L[4, 1, :] = com[:, 2]
 
 println("Después de llenar t=0:")
@@ -79,133 +83,33 @@ selected_indices = [1, 2, 3, 6, 10]
 C1 = all_data_L[:, :, selected_indices]
 
 
-
-# Modelo Lotka-Volterra
-function lv_ode!(du, u, p, t)
-    r, A = p
-    du .= u .* (r .+ A * u)
-end
-
-function simulate_lv_safe(u0, r, A, tspan, t_save)
-    try
-        return simulate_lv(u0, r, A, tspan, t_save)
-    catch e
-        println("Simulation failed: ", e)
-        return fill(Inf, length(t_save), length(u0))
-    end
-end
-
-# Simulación desde condiciones iniciales, evaluando solo en t_save
-function simulate_lv(u0, r, A, tspan, t_save)
-    prob = ODEProblem(lv_ode!, u0, tspan, (r, A))
-    sol = solve(prob, Rodas5(); saveat=t_save, reltol=1e-8, abstol=1e-8)
-    
-    # Reconstruir matriz de soluciones para los tiempos exactos
-    sim = zeros(length(t_save), length(u0))
-    for (i, t) in enumerate(t_save)
-        sim[i, :] = sol(t)
-    end
-    
-    return sim
-end
-
-function unpack_params(p, n_types)
-    n = n_types
-    r = p[1:n]
-    A = reshape(p[n+1:end], (n, n))
-    return r, A
-end
-
-function lv_loss(params_flat, C1, t_save)
-    r, A = unpack_params(params_flat, size(C1, 3))
-    losses = zeros(size(C1, 1))  # Arreglo para almacenar el error promedio de cada experimento
-    for exp_id in 1:size(C1, 1)
-        u0 = C1[exp_id, 1, :]
-        sim = simulate_lv_safe(u0, r, A, (t_save[1], t_save[end]), t_save)
-
-        losses[exp_id] = mean(abs.(sim .- C1[exp_id, :, :]))
-    end
-    return mean(losses)
-end
-
-
-# Optimización de parámetros r y A
-function opt_lv(C1::Array{Float64,3}, t_save::Vector{Float64})
-    n = size(C1, 3)
-    # Parámetros iniciales aleatorios
-    gR0 = [1,1,1,1,1]
-    I0 =  1E-5 * [-1 0 0 0 0; 0 -1 0 0 0; 0 0 -1 0 0; 0 0 0 -1 0; 0 0 0 0 -1]     # Distribución normal con media 0 y desviación estándar 5
-    p0 = vcat(gR0, vec(I0))
-    loss0 = lv_loss(p0, C1, t_save)
-    loss_history = [loss0]
-    r0 = zeros(length(p0))
-
-    println("Initial loss: ", loss0)
-    i = 0
-    while i < 5000
-        rI = rand(MvNormal(zeros(length(p0)), zeros(length(p0)) .+ fill(0.0001, length(p0)))); # Random values to update parameters
-        p1 = copy(p0); # Copy of the initial parameters
-        for pI in 1:length(p1)  # Update parameter values
-            r0[pI] = p1[pI]; # Save previous value
-            p1[pI] += rI[pI]; # Update value
-        end
-
-        println(i)
-
-        loss1 = lv_loss(p1, C1, t_save)
-
-        xiC = (loss0 ^ 2) / (2 * 0.083);
-		xiP = (loss1 ^ 2) / (2 * 0.083);
-
-        c1 = rand() < exp(xiC - xiP)
-        if c1
-            p0 = p1
-            loss0 = loss1
-        end
-        i += 1
-    end
-
-    gR_final = p0[1:n]
-    I_final = reshape(p0[n+1:end], (n, n))
-    println("Final loss: ", loss0)
-    println("Final gR: ", gR_final)
-    println("Final I: ", I_final)
-    return gR_final, I_final
-end
-
-
-
-# Inicialización
-communities = 4
-t_points = 4
-n_types = 5
-
-
 # con datos a tiempos: [0, 24, 48, 72]
 t_save = [0.0, 24.0, 48.0, 72.0]
 C1 = Float64.(C1)
 
 # Ajustar modelo LV
-gR, I = opt_lv(C1, t_save)
+gR, I = fn.opt_lv(C1, t_save, 50000, "C01")
 
 
 
 using Plots
 
 
+# Condiciones iniciales: toma primer experimento, primer tiempo
 for j in 1:size(C1, 1)
     u0 = C1[j, 1, :]
     p = plot()
-    sim_opt = simulate_lv(u0, gR, I, (t_save[1], t_save[end]), t_save)
+    sim_opt = fn.simulate_lv(u0, gR, I, (t_save[1], t_save[end]), t_save)
     for i in 1:size(C1, 3)
         scatter!(t_save, C1[j, :, i], label="Data$i", markershape=:circle)
         plot!(t_save, sim_opt[:, i], label="Sim$i", lw=2)
     end
-    savefig(p, "poblacion_$j.png")
+    savefig(p, "C1_poblacion_$j.png")
 end
 # Simular con parámetros optimizados
 
 # Graficar datos reales y simulados
+
 
 
 

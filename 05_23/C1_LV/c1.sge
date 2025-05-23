@@ -1,0 +1,8 @@
+#!/bin/bash
+#$ -cwd
+#$ -M rodrigoaguilar@ciencias.unam.mx
+#$ -m bea
+#$ -S /bin/bash
+conda activate microbiome_inference
+python moments.py
+python inference_logistic.py

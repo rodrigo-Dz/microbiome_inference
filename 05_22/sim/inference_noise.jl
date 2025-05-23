@@ -71,59 +71,50 @@ function gillespie_LV()
     return timeseries
 end
 
-# Número de tipos de especies
-n_types = 3
-
-# Condición inicial
-n0 = [10, 5, 2]  # por ejemplo: especies A, B, C
-
-# Matrices de interacción positiva y negativa
-I_p = [0.0  0.1  0.0;
-       0.2  0.0  0.1;
-       0.0  0.1  0.0]
-
-I_n = [0.0  0.0  0.2;
-       0.0  0.0  0.1;
-       0.1  0.2  0.0]
-
-# Tasas de crecimiento básicas
-gR = [0.9, 1.7, 1.3]
-
-# Tiempo total de simulación
-t_simulated = 50.0
-
-# Número de puntos a muestrear
-t_points = 100
-
-# Tiempos de muestreo (uniformemente espaciados en este ejemplo)
-sampling_times = range(0, t_simulated, length=t_points)
-
-
-
 fn = include(string("FN.jl"));
 
-# Inicialización
-communities = 4
-t_points = 4
+# Número de tipos de especies
 n_types = 3
+# Tasas de crecimiento
+gR = [0.9, 1.7, 1.3]
+# Matriz de tasas de interacción (positiva y negativa)
+I = 1e-5 .* [-4.8  2.7  -5.0;
+             -2.9 -6.3  3.3;
+              2.0 -4.1 -5.4]
+# Separar en matrices positivas y negativas
+I_p = zeros(n_types, n_types)
+I_n = zeros(n_types, n_types)
+for i in 1:n_types, j in 1:n_types
+    if I[i, j] > 0
+        I_p[i, j] = abs(I[i, j])
+    elseif I[i, j] < 0
+        I_n[i, j] = abs(I[i, j])
+    end
+end
+
+# Poblaciones iniciales
+n0 = [700, 7000, 12000]
+# Tiempo total simulado
+t_simulated = 72
+# Número de puntos de muestreo
+t_points = 4
+# Tiempos de muestreo (uniformemente espaciados)
+sampling_times = [0.0, 24.0, 48.0, 72.0]
+# Número de réplicas (series temporales)
+n_timeseries = 4
+
+
 
 # Arreglo para guardar los datos
-all_data_LV = zeros(Int, communities, t_points, n_types)
+all_data_LV = zeros(Int, n_timeseries, t_points, n_types)
 
-
-
-A = 1E-5 * [-4.8 2.7 -5.0; -2.9 -6.3 3.3; 2.0 -4.1 -5.4]
-
-t_save = [0.0, 24.0, 48.0, 72.0]
 
 for i in 1:communities
-    n0 = rand(500:15000, n_types)
-    s = fn.simulate_lv_safe(n0, r, A, (t_save[1], t_save[end]), t_save)
+    s = gillespie_LV()
     all_data_LV[i, :, :] = round.(Int, s)
 end
 
 print(all_data_LV)
-
 
 # con datos a tiempos: [0, 24, 48, 72]
 t_save = [0.0, 24.0, 48.0, 72.0]
@@ -163,6 +154,6 @@ for j in 1:size(C1, 1)
         scatter!(t_save, C1[j, :, i], label="Data$i", markershape=:circle)
         plot!(t_save, sim_opt[:, i], label="Sim$i", lw=2)
     end
-    savefig(p, "poblacion_$j.png")
+    savefig(p, "poblacion_stoc$j.png")
 end
 # Simular con parámetros optimizados

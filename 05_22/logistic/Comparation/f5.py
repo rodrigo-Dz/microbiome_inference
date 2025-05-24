@@ -104,6 +104,9 @@ col_names = [['ST00101', 'ST00154', 'ST00042', 'ST00046', 'ST00109'],
 
 col_comunities = ["#E22D2D", "#F19721", "#EEEB30", "#87E937", "#30FA8B", "#48F7F7", "#3255F1", "#8A4DEC", "#F34FE5", "#836C3C", "#EEADC2", "#91ADFA"]
 
+from collections import defaultdict
+data_para_anova = defaultdict(list)  # Guarda valores por especie
+
 for i in range(1,13):
 # Import OMM-12 absolute abundance data and parameters
     with open('../C%i_logistic/data/C1_abs_abund.pickle'%i, 'rb') as f: 
@@ -135,6 +138,8 @@ for i in range(1,13):
         
         # Plot posterior
         ax.hist(logistic_posteriors.loc[:, f'gR_{j}'], color = col_comunities[i-1], alpha = 0.4, density=True, bins = 20, log=True)
+        data_para_anova[type].append(logistic_posteriors.loc[:, f'gR_{j}'].values)
+
 
         mean_value = logistic_posteriors.loc[:, f'gR_{j}'].mean()
         ax.axvline(mean_value, color=col_comunities[i-1], linestyle='--', linewidth=2)
@@ -167,3 +172,17 @@ for ax in [axB00, axB01, axB02, axB03, axB04]:
 
 #mp.tight_layout()
 mp.savefig('./fig5.pdf', dpi=300, format='pdf', bbox_inches='tight')
+
+
+from scipy.stats import f_oneway
+
+print("\nResultados del ANOVA por especie:")
+for tipo, listas in data_para_anova.items():
+    if len(listas) > 1:
+        f_stat, p_val = f_oneway(*listas)
+        print(f"{keys[tipo]} (ID: {tipo}): F = {f_stat:.3f}, p = {p_val:.3e}")
+    else:
+        print(f"{keys[tipo]} (ID: {tipo}): Solo aparece en una comunidad, no se puede hacer ANOVA")
+
+
+#

@@ -198,6 +198,8 @@ for i in range(5):
                 
         type_color = colors[type_name_long]
         
+        
+
         # Plot posterior
         ax.hist(C1_logistic_posteriors.loc[:,'mR_%i'%n_type], color = type_color, alpha = 1., density=True, bins = 15, log=True)
         

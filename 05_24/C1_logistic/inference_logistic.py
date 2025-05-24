@@ -77,7 +77,7 @@ gR_prior = n_types * [("uniform", 0.25, 72)]
 # Death rates
 dR_prior = n_types * [("uniform", 0, 2E6)]
 # Carrying capacity
-N_prior = [("uniform", 1.4E7, 2E6)]
+N_prior = [("uniform", 1.3E7, 2E6)]
 # Scaling factor
 mSigma_prior = [("uniform", 1E6, 9E6)]
 

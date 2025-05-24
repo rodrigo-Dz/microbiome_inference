@@ -77,7 +77,7 @@ gR_prior = n_types * [("uniform", 0.25, 72)]
 # Death rates
 dR_prior = n_types * [("uniform", 0, 2E6)]
 # Carrying capacity
-N_prior = [("uniform", 1.3E7, 2E6)]
+N_prior = [("uniform", 1.3E7, 1.6E7)]
 # Scaling factor
 mSigma_prior = [("uniform", 1E6, 9E6)]
 
@@ -181,11 +181,10 @@ print('number of generations: %s'%history_abs_abund.max_t)
 
 gR_lim = n_types * [(0, 75)]
 dR_lim = n_types * [(0, 2.1E6)]
-mR_lim = n_types * [(0, 2.1E6)]
-N_lim = [(1.3E7, 1.7E7)]
+N_lim = [(1.2E7, 1.7E7)]
 mSigma_lim = [(1E6, 1E7)]
 
-limits = gR_lim + dR_lim + mR_lim + N_lim + mSigma_lim
+limits = gR_lim + dR_lim  + N_lim + mSigma_lim
 limits_dict = dict(zip(parameter_names, limits))
 
 gR_mean_posterior, dR_mean_posterior, mR_mean_posterior = [], [], []

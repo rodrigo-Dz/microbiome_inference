@@ -157,7 +157,6 @@ with open('./logistic_inference_parameters.pickle', 'wb') as f:
 print(inference_dict)
 
 
-
 abc_abs_abund = ABCSMC(
     models=logistic_model_abs_abund,
     parameter_priors=priors,
@@ -166,7 +165,6 @@ abc_abs_abund = ABCSMC(
     transitions=MultivariateNormalTransition(scaling=scaling_p, bandwidth_selector=silverman_rule_of_thumb),
     eps=QuantileEpsilon(initial_epsilon=initial_epsilon_p, alpha=alpha_p, quantile_multiplier=quantile_multiplier_p),
 )
-
 
 abc_abs_abund.new(db_path_abs_abund, {"moments": C1_abs_abund["moments"]});
 

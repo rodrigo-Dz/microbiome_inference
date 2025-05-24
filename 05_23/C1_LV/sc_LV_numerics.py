@@ -213,7 +213,7 @@ def stopping_event_rel_abund(t, y, gR, I_p, I_n):
 stopping_event_rel_abund.terminal = True
 
 # Numerical solver for a set of parameters (relative abundance)
-def model_rel_abund_closure_from_3rd(parameters):
+def model_rel_abund_closure_from_2nd(parameters):
 
     # Growth rates
     gR = np.array([parameters['gR_%i'%i] for i in range(n_types)])
@@ -234,7 +234,7 @@ def model_rel_abund_closure_from_3rd(parameters):
     if sum((gR<0) + (I_intra>=0)) + (m_Sigma<0) == 0:
         
         # Solve the model numerically
-        predicted_moments = integrate.solve_ivp(eq_moments_rel_abund_closure_from_3rd, [0, t_simulated], np.hstack((init_rel_abund, m_Sigma)), args = (gR, I_p, I_n), t_eval = sampling_times, method = 'LSODA', events=stopping_event_rel_abund)
+        predicted_moments = integrate.solve_ivp(eq_moments_rel_abund_closure_from_2nd, [0, t_simulated], np.hstack((init_rel_abund, m_Sigma)), args = (gR, I_p, I_n), t_eval = sampling_times, method = 'LSODA', events=stopping_event_rel_abund)
 
         # Check if a solution was found
         if predicted_moments.success and predicted_moments.y.shape == (n_types**2 + n_types + 1, t_points):

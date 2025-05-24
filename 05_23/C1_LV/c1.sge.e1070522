@@ -1,0 +1,8 @@
+ABC.Sampler INFO: Parallelize sampling on 64 processes.
+ABC.History INFO: Start <ABCSMC id=1, start_time=2025-05-23 18:59:39>
+ABC INFO: Calibration sample t = -1.
+ABC INFO: t: 0, eps: 2.63540431e+12.
+/mnt/atgc-d3/sur/users/raguilar/exp/2025/microbiome_inference/05_23/C1_LV/sc_LV_numerics.py:108: RuntimeWarning: overflow encountered in multiply
+  D_cm_kj += diag * 2. * ((I_p - I_n) * m_k_prod).sum(1) * m_k
+/mnt/atgc-d3/sur/users/raguilar/exp/2025/microbiome_inference/05_23/C1_LV/sc_LV_numerics.py:108: RuntimeWarning: overflow encountered in multiply
+  D_cm_kj += diag * 2. * ((I_p - I_n) * m_k_prod).sum(1) * m_k

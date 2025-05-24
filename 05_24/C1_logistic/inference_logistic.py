@@ -20,8 +20,8 @@ mp.rcParams['figure.figsize'] = (4, 4)
 
 
 
-from sc_logistic_numerics import model_abs_abund_closure_from_2nd as logistic_model_abs_abund
-from sc_logistic_numerics import model_rel_abund_closure_from_2nd as logistic_model_rel_abund
+from sc_logistic_numerics import model_abs_abund_closure_from_3rd as logistic_model_abs_abund
+from sc_logistic_numerics import model_rel_abund_closure_from_3rd as logistic_model_rel_abund
 
 # import warnings
 # warnings.filterwarnings('ignore')
@@ -73,7 +73,7 @@ N_names = ["N"]
 mSigma_names = ["mSigma[0]"]
 
 # Growth rates
-gR_prior = n_types * [("uniform", 0.25, 72)]
+gR_prior = n_types * [("uniform", 0.25, 80)]
 # Death rates
 dR_prior = n_types * [("uniform", 0, 2E6)]
 # Carrying capacity

@@ -26,8 +26,8 @@ from sc_logistic_numerics import model_rel_abund_closure_from_3rd as logistic_mo
 # import warnings
 # warnings.filterwarnings('ignore')
 
-db_path_abs_abund = "sqlite:///./data/logistic_inference_abs_abund.db"
-db_path_rel_abund = "sqlite:///./data/logistic_inference_rel_abund.db"
+db_path_abs_abund = "sqlite:///./data/C1_logistic_inference_abs_abund.db"
+db_path_rel_abund = "sqlite:///./data/C1_logistic_inference_rel_abund.db"
 
 
 def distance_abs_abund(predicted_moments_abs_abund, empirical_moments_abs_abund):

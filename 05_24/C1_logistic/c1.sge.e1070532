@@ -1,0 +1,379 @@
+ABC.Sampler INFO: Parallelize sampling on 88 processes.
+ABC.History INFO: Start <ABCSMC id=4, start_time=2025-05-24 13:32:43>
+ABC INFO: Calibration sample t = -1.
+ABC INFO: t: 0, eps: 2.24447815e+14.
+ABC INFO: Accepted: 2000 / 26231 = 7.6246e-02, ESS: 2.0000e+03.
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:101: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+ABC.Adaptation INFO: Change nr particles 2000 -> 500
+ABC INFO: t: 1, eps: 1.42278526e+14.
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+ABC INFO: Accepted: 500 / 7737 = 6.4625e-02, ESS: 3.4673e+02.
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:101: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+ABC.Adaptation INFO: Change nr particles 500 -> 500
+ABC INFO: t: 2, eps: 1.10572296e+14.
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+/mnt/atgc-d3/sur/modules/pkgs/mamba/main/envs/microbiome_inference/lib/python3.13/site-packages/pyabc/transition/multivariatenormal.py:109: RuntimeWarning: covariance is not symmetric positive-semidefinite.
+  perturbed = sample + np.random.multivariate_normal(
+ABC INFO: Accepted: 500 / 14614 = 3.4214e-02, ESS: 2.8030e+02.
+ABC.Adaptation INFO: Change nr particles 500 -> 500
+ABC INFO: t: 3, eps: 8.90587414e+13.
+ABC INFO: Accepted: 500 / 26280 = 1.9026e-02, ESS: 1.9321e+02.
+ABC.Adaptation INFO: Change nr particles 500 -> 500
+ABC INFO: t: 4, eps: 7.80750308e+13.
+ABC INFO: Accepted: 500 / 17989 = 2.7795e-02, ESS: 2.9275e+02.
+ABC.Adaptation INFO: Change nr particles 500 -> 500
+ABC INFO: t: 5, eps: 7.09587322e+13.
+ABC INFO: Accepted: 500 / 11046 = 4.5265e-02, ESS: 2.1620e+02.
+ABC.Adaptation INFO: Change nr particles 500 -> 500
+ABC INFO: Stop: Maximum number of generations.
+ABC.History INFO: Done <ABCSMC id=4, duration=0:02:50.883826, end_time=2025-05-24 13:35:34>

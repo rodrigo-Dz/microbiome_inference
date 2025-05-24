@@ -137,7 +137,7 @@ quantile_multiplier_p = 1.
 ### For running ABCSMC function
 
 ## Stopping criterion: minimum eps
-minimum_epsilon_abs_abund_p = 1E13
+minimum_epsilon_abs_abund_p = 1E10
 
 ## Stopping criterion: minimum eps
 minimum_epsilon_rel_abund_p = 1E-1

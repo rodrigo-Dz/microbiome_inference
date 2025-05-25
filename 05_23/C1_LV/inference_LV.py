@@ -158,7 +158,7 @@ with open('./LV_inference_parameters.pickle', 'wb') as f:
 
 print(inference_dict)
 
-
+'''
 
 abc_abs_abund = ABCSMC(
     models=LV_model_abs_abund,
@@ -174,7 +174,7 @@ abc_abs_abund.new(db_path_abs_abund, {"moments": C1_abs_abund["moments"]});
 
 history_abs_abund = abc_abs_abund.run(minimum_epsilon = minimum_epsilon_abs_abund_p, max_nr_populations = max_nr_populations_p, max_walltime = max_walltime_p)
 print('total number of simulations: %i'%history_abs_abund.total_nr_simulations)
-
+'''
 
 
 history_abs_abund = History(db_path_abs_abund, _id=1)

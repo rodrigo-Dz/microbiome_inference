@@ -143,7 +143,7 @@ minimum_epsilon_abs_abund_p = 1E8
 minimum_epsilon_rel_abund_p = 1E-3
 
 ## Stopping criterion: maximum number of generations
-max_nr_populations_p = 3
+max_nr_populations_p = 50
 
 ## Stopping criterion: maximum computing time
 max_walltime_p = timedelta(minutes=6*720)

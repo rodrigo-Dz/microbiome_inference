@@ -1,0 +1,51 @@
+['NS00059A']
+['NS00143A', 'NS00155A', 'NS00167A']
+['NS00065A', 'NS00077A']
+['NS00149A']
+[[[    0     0     0     0     0     0     0     0     0     0]
+  [    0     0     0     0     0     0     0     0     0     0]
+  [    0     0     0     0     0     0     0     0     0     0]
+  [    0     0     0     0     0     0     0     0     0     0]]
+
+ [[    0     0     0     0     0     0     0     0     0     0]
+  [    0     0     0     0     0     0     0     0     0     0]
+  [    0     0     0     0     0     0     0     0     0     0]
+  [    0     0     0     0     0     0     0     0     0     0]]
+
+ [[    0 14408     0     5 16212     0 26205  5579  7099     0]
+  [    0 28659     0   254 58343     1  4016  2061  2266     2]
+  [    0 52728     0     4 78830     0   847   554  3270     0]
+  [    0 83680     0  9493  1300     0    73    33  1099     0]]
+
+ [[    0     0     0     0     0     0     0     0     0     0]
+  [    0     0     0     0     0     0     0     0     0     0]
+  [    0     0     0     0     0     0     0     0     0     0]
+  [    0     0     0     0     0     0     0     0     0     0]]]
+[[[    0     0     0     0     0]
+  [    0     0     0     0     0]
+  [    0     0     0     0     0]
+  [    0     0     0     0     0]]
+
+ [[    0     0     0     0     0]
+  [    0     0     0     0     0]
+  [    0     0     0     0     0]
+  [    0     0     0     0     0]]
+
+ [[14408 16212 26205  5579  7099]
+  [28659 58343  4016  2061  2266]
+  [52728 78830   847   554  3270]
+  [83680  1300    73    33  1099]]
+
+ [[    0     0     0     0     0]
+  [    0     0     0     0     0]
+  [    0     0     0     0     0]
+  [    0     0     0     0     0]]]
+1
+{'gR_0': ('uniform', 0.25, 150), 'gR_1': ('uniform', 0.25, 150), 'gR_2': ('uniform', 0.25, 150), 'gR_3': ('uniform', 0.25, 150), 'gR_4': ('uniform', 0.25, 150), 'dR_0': ('uniform', 0, 2000000.0), 'dR_1': ('uniform', 0, 2000000.0), 'dR_2': ('uniform', 0, 2000000.0), 'dR_3': ('uniform', 0, 2000000.0), 'dR_4': ('uniform', 0, 2000000.0), 'N': ('uniform', 13000000.0, 26000000.0), 'mSigma[0]': ('uniform', 1000000.0, 9000000.0)}
+{'priors_dict': {'gR_0': ('uniform', 0.25, 150), 'gR_1': ('uniform', 0.25, 150), 'gR_2': ('uniform', 0.25, 150), 'gR_3': ('uniform', 0.25, 150), 'gR_4': ('uniform', 0.25, 150), 'dR_0': ('uniform', 0, 2000000.0), 'dR_1': ('uniform', 0, 2000000.0), 'dR_2': ('uniform', 0, 2000000.0), 'dR_3': ('uniform', 0, 2000000.0), 'dR_4': ('uniform', 0, 2000000.0), 'N': ('uniform', 13000000.0, 26000000.0), 'mSigma[0]': ('uniform', 1000000.0, 9000000.0)}, 'start_nr_particles_p': 2000, 'mean_cv_p': 0.25, 'nr_calibration_particles_p': 400, 'n_bootstrap_p': 2, 'min_population_size_p': 500, 'max_population_size_p': 1000, 'scaling_p': 1.0, 'initial_epsilon_p': 'from_sample', 'alpha_p': 0.1, 'quantile_multiplier_p': 1.0, 'minimum_epsilon_abs_abund_p': 100000000.0, 'minimum_epsilon_rel_abund_p': 0.001, 'max_nr_populations_p': 50, 'max_walltime_p': datetime.timedelta(days=3)}
+total number of simulations: 28717
+number of generations: 49
+posterior: 	 ['gR_4' 'gR_0' 'gR_1' 'gR_3' 'gR_2'] 
+
+posterior: 	 ['dR_0' 'dR_4' 'dR_3' 'dR_1' 'dR_2'] 
+

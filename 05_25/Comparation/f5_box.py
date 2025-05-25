@@ -133,6 +133,7 @@ for i in range(1, 13):
         ax.labels.append(f'C{i}')
         ax.colors.append(col_comunities[i - 1])
         j += 1
+    print(f"Comunidad {i} ({col_names[i - 1]})")
 
 # Hacer los boxplots después de acumular todo
 for tipo, ax in names_2_axes.items():

@@ -12,7 +12,6 @@ from pyabc.populationstrategy import AdaptivePopulationSize, ListPopulationSize
 from pyabc.visualization import plot_kde_matrix
 from pyabc.sampler import SingleCoreSampler
 
-
 import matplotlib.lines as mlines
 from matplotlib import rc
 rc('xtick', labelsize=14)
@@ -78,9 +77,9 @@ gR_prior = n_types * [("uniform", 0.25, 80)]
 # Death rates
 dR_prior = n_types * [("uniform", 0, 2E6)]
 # Carrying capacity
-N_prior = [("uniform", 1.4E7, 2E6)]
+N_prior = [("uniform", 1.3E7, 1.6E7)]
 # Scaling factor
-mSigma_prior = [("uniform", 1E7, 9E7)]
+mSigma_prior = [("uniform", 1E6, 9E6)]
 
 parameter_names = gR_names + dR_names + N_names + mSigma_names
 priors_shapes = gR_prior + dR_prior + N_prior + mSigma_prior
@@ -133,18 +132,18 @@ initial_epsilon_p = 'from_sample'
 alpha_p = 0.1
 
 # Factor to multiply the quantile with
-quantile_multiplier_p = 1.1
+quantile_multiplier_p = 1.
 
 ### For running ABCSMC function
 
 ## Stopping criterion: minimum eps
-minimum_epsilon_abs_abund_p = 1E8
+minimum_epsilon_abs_abund_p = 1E10
 
 ## Stopping criterion: minimum eps
-minimum_epsilon_rel_abund_p = 1E-3
+minimum_epsilon_rel_abund_p = 1E-1
 
 ## Stopping criterion: maximum number of generations
-max_nr_populations_p = 80
+max_nr_populations_p = 6
 
 ## Stopping criterion: maximum computing time
 max_walltime_p = timedelta(minutes=6*720)
@@ -158,37 +157,37 @@ with open('./logistic_inference_parameters.pickle', 'wb') as f:
 print(inference_dict)
 
 
-abc_rel_abund = ABCSMC(
-    models=logistic_model_rel_abund,
+abc_abs_abund = ABCSMC(
+    models=logistic_model_abs_abund,
     parameter_priors=priors,
-    distance_function=distance_rel_abund,
+    distance_function=distance_abs_abund,
     population_size=AdaptivePopulationSize(start_nr_particles=start_nr_particles_p, mean_cv = mean_cv_p, nr_calibration_particles=nr_calibration_particles_p, n_bootstrap=n_bootstrap_p, min_population_size = min_population_size_p, max_population_size = max_population_size_p),
     transitions=MultivariateNormalTransition(scaling=scaling_p, bandwidth_selector=silverman_rule_of_thumb),
     eps=QuantileEpsilon(initial_epsilon=initial_epsilon_p, alpha=alpha_p, quantile_multiplier=quantile_multiplier_p),
 )
 
-abc_rel_abund.new(db_path_rel_abund, {"moments": C1_rel_abund["moments"]});
+abc_abs_abund.new(db_path_abs_abund, {"moments": C1_abs_abund["moments"]});
 
-history_rel_abund = abc_rel_abund.run(minimum_epsilon = minimum_epsilon_rel_abund_p, max_nr_populations = max_nr_populations_p, max_walltime = max_walltime_p)
-print('total number of simulations: %i'%history_rel_abund.total_nr_simulations)
+history_abs_abund = abc_abs_abund.run(minimum_epsilon = minimum_epsilon_abs_abund_p, max_nr_populations = max_nr_populations_p, max_walltime = max_walltime_p)
+print('total number of simulations: %i'%history_abs_abund.total_nr_simulations)
 
 
 
-history_rel_abund = History(db_path_rel_abund, _id=1)
-print('number of generations: %s'%history_rel_abund.max_t)
+history_abs_abund = History(db_path_abs_abund, _id=1)
+print('number of generations: %s'%history_abs_abund.max_t)
 
 
 gR_lim = n_types * [(0, 75)]
 dR_lim = n_types * [(0, 2.1E6)]
 N_lim = [(1.2E7, 1.7E7)]
-mSigma_lim = [(1E7, 1E8)]
+mSigma_lim = [(1E6, 1E7)]
 
 limits = gR_lim + dR_lim  + N_lim + mSigma_lim
 limits_dict = dict(zip(parameter_names, limits))
 
 gR_mean_posterior, dR_mean_posterior, mR_mean_posterior = [], [], []
 
-posterior_dist = history_rel_abund.get_distribution(m=0,t=history_rel_abund.max_t)[0]
+posterior_dist = history_abs_abund.get_distribution(m=0,t=history_abs_abund.max_t)[0]
 
 for par in parameter_names:
     
@@ -211,7 +210,7 @@ for par in parameter_names:
     mp.xlim(limits_dict[par])
     mp.legend()
     mp.title('%s'%par)
-    mp.savefig('./res/%s_rel'%par)
+    mp.savefig('./res/%s_abs'%par)
     mp.close()
 
 print('posterior: \t', np.array(gR_names)[np.argsort(gR_mean_posterior)],'\n')

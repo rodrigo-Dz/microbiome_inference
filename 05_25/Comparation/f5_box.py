@@ -106,13 +106,13 @@ data_para_anova = defaultdict(list)
 
 # Llenar los datos y preparar para boxplots
 for i in range(1, 13):
-    with open(f'../C{i}_logistic/data/C1_abs_abund.pickle', 'rb') as f:
+    with open(f'../C{i}/data/C1_abs_abund.pickle', 'rb') as f:
         abs_abund = pc.load(f)['data']["moments"]
 
-    with open(f'../C{i}_logistic/logistic_inference_parameters.pickle', 'rb') as f:
+    with open(f'../C{i}/logistic_inference_parameters.pickle', 'rb') as f:
         logistic_inf_par = pc.load(f)
 
-    logistic_history = History(f"sqlite:///../C{i}_logistic/data/logistic_inference_abs_abund.db", _id=1)
+    logistic_history = History(f"sqlite:///../C{i}/data/logistic_inference_abs_abund.db", _id=1)
     logistic_posteriors = logistic_history.get_distribution(m=0, t=logistic_history.max_t)[0]
 
     com = col_names[i - 1]

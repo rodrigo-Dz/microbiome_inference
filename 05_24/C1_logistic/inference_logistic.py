@@ -125,7 +125,6 @@ max_population_size_p = 1000
 scaling_p = 1.
 
 ## For eps
-
 # Initial eps (if ='from sample', eps will be calculated from the prior)
 initial_epsilon_p = 'from_sample'
 
@@ -133,7 +132,7 @@ initial_epsilon_p = 'from_sample'
 alpha_p = 0.1
 
 # Factor to multiply the quantile with
-quantile_multiplier_p = 1.1
+quantile_multiplier_p = 1.
 
 ### For running ABCSMC function
 

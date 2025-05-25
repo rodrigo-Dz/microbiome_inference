@@ -78,9 +78,9 @@ gR_prior = n_types * [("uniform", 0.25, 150)]
 # Death rates
 dR_prior = n_types * [("uniform", 0, 2E6)]
 # Carrying capacity
-N_prior = [("uniform", 1.4E7, 2E6)]
+N_prior = [("uniform", 1.4E6, 2E5)]
 # Scaling factor
-mSigma_prior = [("uniform", 1E7, 9E7)]
+mSigma_prior = [("uniform", 1E5, 9E5)]
 
 parameter_names = gR_names + dR_names + N_names + mSigma_names
 priors_shapes = gR_prior + dR_prior + N_prior + mSigma_prior
@@ -143,7 +143,7 @@ minimum_epsilon_abs_abund_p = 1E8
 minimum_epsilon_rel_abund_p = 1E-3
 
 ## Stopping criterion: maximum number of generations
-max_nr_populations_p = 80
+max_nr_populations_p = 3
 
 ## Stopping criterion: maximum computing time
 max_walltime_p = timedelta(minutes=6*720)
@@ -177,10 +177,10 @@ history_rel_abund = History(db_path_rel_abund, _id=1)
 print('number of generations: %s'%history_rel_abund.max_t)
 
 
-gR_lim = n_types * [(0, 75)]
+gR_lim = n_types * [(0, 150)]
 dR_lim = n_types * [(0, 2.1E6)]
-N_lim = [(1.2E7, 1.7E7)]
-mSigma_lim = [(1E7, 1E8)]
+N_lim = [(1.2E6, 1.7E6)]
+mSigma_lim = [(1E6, 1E7)]
 
 limits = gR_lim + dR_lim  + N_lim + mSigma_lim
 limits_dict = dict(zip(parameter_names, limits))
